@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #2f363e;
+}
+
+.clock-board {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2f363e;
+  border-radius: 225px 225px 20px 20px;
+  box-shadow: 5px 25px 75px rgba(0, 0, 0, .75), 10px 10px 70px rgba(0, 0, 0, .25),
+  inset 5px 5px 10px rgba(0 ,0, 0, .5),
+  inset 5px 5px 20px rgba(0, 0, 0, .2),
+  inset -5px -5px 15px rgba(0, 0, 0, .75);
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 450px;
+  height: 450px;
+  margin-bottom: 30px;
+
+  background-color: #2f363e;
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0 , .25),
+  inset 5px 5px 10px rgba(0 ,0, 0, .5),
+  inset 5px 5px 20px rgba(0, 0, 0, .2),
+  inset -5px -5px 15px rgba(0, 0, 0, .75);
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  z-index: 1000;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #2f363e;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.clock-hour {
+  position: absolute;
+  inset: 20px;
+
+  color: #fff;
+  text-align: center;
+
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock-hour-text {
+  display: inline-block;
+
+  opacity: .25;
+  font-size: 2em;
+  font-weight: 600;
+
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  //align-items: start;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(0, 0, 0, .25);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -8.5px;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  background-color: var(--clr);
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+.circle-2 {
+  width: 240px;
+  height: 240px;
+  z-index: 9;
+}
+
+.circle-3 {
+  width: 180px;
+  height: 180px;
+  z-index: 8;
+}
+
+.circle-arrow {
+  position: absolute;
+  z-index: 11;
+  width: 6px;
+  height: 50%;
+  background-color: var(--clr);
+  opacity: .75;
+
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) .circle-arrow {
+  width: 2px;
+}
+
+.circle:nth-child(2) .circle-arrow {
+  width: 6px;
+}
+
+

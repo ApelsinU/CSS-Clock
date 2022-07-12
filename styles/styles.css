@@ -19,12 +19,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
 
   background-color: #2f363e;
   border-radius: 225px 225px 20px 20px;
   box-shadow: 5px 25px 75px rgba(0, 0, 0, .75), 10px 10px 70px rgba(0, 0, 0, .25),
   inset 5px 5px 10px rgba(0 ,0, 0, .5),
-  inset 5px 5px 20px rgba(0, 0, 0, .2),
+  inset 5px 5px 20px rgba(255, 255, 255, .2),
   inset -5px -5px 15px rgba(0, 0, 0, .75);
 }
 
@@ -42,7 +44,7 @@ body {
   border-radius: 50%;
   box-shadow: 10px 50px 70px rgba(0, 0, 0 , .25),
   inset 5px 5px 10px rgba(0 ,0, 0, .5),
-  inset 5px 5px 20px rgba(0, 0, 0, .2),
+  inset 5px 5px 20px rgba(255, 255, 255, .2),
   inset -5px -5px 15px rgba(0, 0, 0, .75);
 }
 
@@ -83,7 +85,6 @@ body {
   position: absolute;
   display: flex;
   justify-content: center;
-  //align-items: start;
   width: 300px;
   height: 300px;
   border: 2px solid rgba(0, 0, 0, .25);
@@ -136,4 +137,56 @@ body {
   width: 6px;
 }
 
+/* Digital */
 
+.digital-clock {
+  display: flex;
+  padding: 10px 26px;
+  font-size: 1.4em;
+  font-weight: 500;
+
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0 , .5),
+  inset 5px 5px 20px rgba(255, 255, 255, .2),
+  inset -5px -5px 15px rgba(0, 0, 0, .75);
+}
+
+.time {
+  position: relative;
+  color: var(--clr);
+
+  margin-right: 20px;
+}
+
+.time:nth-child(1)::after {
+  content: ":";
+  position: absolute;
+  font-size: 1em;
+  color: var(--clr);
+  margin-left: 7px;
+}
+
+.time:nth-child(2)::after {
+  content: ":";
+  position: absolute;
+  font-size: 1em;
+  color: var(--clr);
+  margin-left: 8px;
+
+  animation: blink 1s steps(1) infinite;
+}
+
+.time-prefix {
+  font-size: 1em;
+  color: #fff;
+  opacity: .25;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

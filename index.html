@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Clock</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -11,32 +11,35 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="clock-board">
-      <div class="clock">
-        <div class="circle" id="sec" style="--clr:#04fc43"><i class="circle-arrow" ></i></div>
-        <div class="circle circle-2" id="min" style="--clr:#fee900"><i class="circle-arrow" ></i></div>
-        <div class="circle circle-3" id="hour" style="--clr:#ff2972"><i class="circle-arrow" ></i></div>
+<div class="container">
+  <div class="clock-board">
+    <div class="clock">
+      <div class="circle" id="sec" style="--clr:#04fc43"><i class="circle-arrow" ></i></div>
+      <div class="circle circle-2" id="min" style="--clr:#fee900"><i class="circle-arrow" ></i></div>
+      <div class="circle circle-3" id="hour" style="--clr:#ff2972"><i class="circle-arrow" ></i></div>
 
-        <span class="clock-hour" style="--i:1"><b class="clock-hour-text">1</b></span>
-        <span class="clock-hour" style="--i:2"><b class="clock-hour-text">2</b></span>
-        <span class="clock-hour" style="--i:3"><b class="clock-hour-text">3</b></span>
-        <span class="clock-hour" style="--i:4"><b class="clock-hour-text">4</b></span>
-        <span class="clock-hour" style="--i:5"><b class="clock-hour-text">5</b></span>
-        <span class="clock-hour" style="--i:6"><b class="clock-hour-text">6</b></span>
-        <span class="clock-hour" style="--i:7"><b class="clock-hour-text">7</b></span>
-        <span class="clock-hour" style="--i:8"><b class="clock-hour-text">9</b></span>
-        <span class="clock-hour" style="--i:9"><b class="clock-hour-text">9</b></span>
-        <span class="clock-hour" style="--i:10"><b class="clock-hour-text">10</b></span>
-        <span class="clock-hour" style="--i:11"><b class="clock-hour-text">11</b></span>
-        <span class="clock-hour" style="--i:12"><b class="clock-hour-text">12</b></span>
-      </div>
+      <span class="clock-hour" style="--i:1"><b class="clock-hour-text">1</b></span>
+      <span class="clock-hour" style="--i:2"><b class="clock-hour-text">2</b></span>
+      <span class="clock-hour" style="--i:3"><b class="clock-hour-text">3</b></span>
+      <span class="clock-hour" style="--i:4"><b class="clock-hour-text">4</b></span>
+      <span class="clock-hour" style="--i:5"><b class="clock-hour-text">5</b></span>
+      <span class="clock-hour" style="--i:6"><b class="clock-hour-text">6</b></span>
+      <span class="clock-hour" style="--i:7"><b class="clock-hour-text">7</b></span>
+      <span class="clock-hour" style="--i:8"><b class="clock-hour-text">8</b></span>
+      <span class="clock-hour" style="--i:9"><b class="clock-hour-text">9</b></span>
+      <span class="clock-hour" style="--i:10"><b class="clock-hour-text">10</b></span>
+      <span class="clock-hour" style="--i:11"><b class="clock-hour-text">11</b></span>
+      <span class="clock-hour" style="--i:12"><b class="clock-hour-text">12</b></span>
     </div>
 
+    <div class="digital-clock">
+      <div id="dg-hour" style="--clr:#ff2972" class="time">00</div>
+      <div id="dg-min" style="--clr:#fee900" class="time">00</div>
+      <div id="dg-sec" style="--clr:#04fc43" class="time">00</div>
+      <div class="time-prefix" id="time-prefix">PM</div>
+    </div>
   </div>
-
-
-
+</div>
 
 <script src="./js/app.js"></script>
 </body>

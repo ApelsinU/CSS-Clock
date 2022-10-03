@@ -1,2 +1,6 @@
 # CSS-Clock
-Simple clock on Html Css Js  
+
+- css vars
+- css animations
+
+Design: https://www.youtube.com/c/OnlineTutorials4Designers
